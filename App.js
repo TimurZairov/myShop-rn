@@ -16,7 +16,7 @@ import Splash from "./src/screens/auth/Splash";
 const App: () => Node = () => {
 
     return (
-        <SafeAreaView style={{flex: 1}}>
+        <SafeAreaView style={{flex: 1, backgroundColor: 'white'}}>
             <Splash />
         </SafeAreaView>
     );

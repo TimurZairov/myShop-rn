@@ -1,0 +1,11 @@
+export const COLORS = {
+    MAIN_COLOR: 'white',
+    PRIMARY_COLOR: '#4F63AC',
+    GRAY_COLOR: '#999999',
+    INPUT_COLOR: '#C5C5C5',
+    ORANGE_COLOR: '#FCA34D',
+    INPUT_BORDER: '#8D9BB5',
+    DARK_GREY: '#3F4A59',
+    LIGHT_GREY: '#DADADA'
+
+}

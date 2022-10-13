@@ -1,17 +1,17 @@
 import {StyleSheet} from "react-native";
+import {COLORS} from "../../utils/colors";
 
 export const styles = StyleSheet.create({
     buttonContainer: {
-        width: 303,
         height: 60,
-        backgroundColor: '#4F63AC',
+        backgroundColor: COLORS.PRIMARY_COLOR,
         padding: 8,
         justifyContent: 'center',
         alignItems: 'center',
         borderRadius: 8
     },
     buttonTitle: {
-        color: 'white',
+        color: COLORS.MAIN_COLOR,
         fontSize: 16,
         fontWeight: 'bold'
     }

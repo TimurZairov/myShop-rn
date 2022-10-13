@@ -1,23 +1,17 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow strict-local
- */
-
 import React from 'react';
 import {
     SafeAreaView,
 } from 'react-native';
 import Splash from "./src/screens/auth/Splash";
+import SingUp from "./src/screens/auth/Singup";
 
 
 const App: () => Node = () => {
 
     return (
-        <SafeAreaView style={{flex: 1, backgroundColor: 'white'}}>
-            <Splash />
+        <SafeAreaView style={{backgroundColor: 'white'}}>
+            {/*<Splash />*/}
+            <SingUp />
         </SafeAreaView>
     );
 };

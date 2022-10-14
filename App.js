@@ -6,6 +6,7 @@ import { GoogleSignin } from '@react-native-google-signin/google-signin'; //ав
 import Config from "react-native-config"; // для исаользования .env библиотека
 import Splash from "./src/screens/auth/Splash";
 import SingUp from "./src/screens/auth/Singup";
+import SingIn from "./src/screens/auth/SingIn";
 
 
 const App: () => Node = () => {
@@ -17,7 +18,8 @@ const App: () => Node = () => {
     return (
         <SafeAreaView style={{backgroundColor: 'white'}}>
             {/*<Splash />*/}
-            <SingUp />
+            {/*<SingUp />*/}
+            <SingIn />
         </SafeAreaView>
     );
 };

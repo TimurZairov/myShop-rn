@@ -9,14 +9,17 @@ import Separator from "../../../components/Separator";
 import Google from "../../../components/Google";
 import Account from "../../../components/Account";
 
-const SingUp = () => {
+const SingUp = ( {navigation} ) => {
     const width = new Dimensions.get("window")
     const [checked, setChecked] = useState(false)
 
+    const goToMainScreen = () => {
+        navigation.goBack()
+    }
 
     return (
         <View style={styles.container}>
-            <AppHeader title='Sign Up'/>
+            <AppHeader title='Sign Up' onPress={goToMainScreen}/>
             <ScrollView showsVerticalScrollIndicator={false}>
                 <Input label='Name' placeholder='John Doe'/>
                 <Input label='E-mail' placeholder='example@gmail.com'/>

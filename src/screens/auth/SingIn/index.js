@@ -8,10 +8,19 @@ import Separator from "../../../components/Separator";
 import Google from "../../../components/Google";
 import Account from "../../../components/Account";
 
-const SingIn = () => {
+const SingIn = ({navigation}) => {
+
+    const goBackToMAinScreen = () => {
+        navigation.goBack()
+    }
+
+    const onSignIn = () => {
+        navigation.navigate('SingUp')
+    }
+
     return (
         <View style={styles.container}>
-            <AppHeader title='Sign Up'/>
+            <AppHeader title='Sign Up' onPress={goBackToMAinScreen}/>
             <ScrollView showsVerticalScrollIndicator={false}>
                 <Input label='E-mail' placeholder='example@gmail.com'/>
                 <Input
@@ -22,7 +31,7 @@ const SingIn = () => {
                 <Button title='Sign In'/>
                 <Separator/>
                 <Google/>
-                <Account/>
+                <Account onPress={onSignIn}/>
             </ScrollView>
 
         </View>

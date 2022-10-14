@@ -27,8 +27,8 @@ const App: () => Node = () => {
     return (
 
         <NavigationContainer theme={theme}>
-            <Stack.Navigator>
-                <Stack.Screen name='Splash' component={Splash}/>
+            <Stack.Navigator >
+                <Stack.Screen  name='Splash' component={Splash}/>
                 <Stack.Screen name='SingUp' component={SingUp}/>
                 <Stack.Screen name='SingIn' component={SingIn}/>
             </Stack.Navigator>

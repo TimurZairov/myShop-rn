@@ -1,12 +1,12 @@
 import React from "react";
-import {Text, View} from "react-native";
+import {Pressable, Text} from "react-native";
 import {styles} from "./style";
 
-const Account = ({title}) => {
+const Account = ({onPress}) => {
     return(
-        <View>
+        <Pressable hitSlop={20} onPress={onPress}>
             <Text style={styles.text}>Already have an account? <Text style={{fontWeight: '700'}}>Sign In</Text> </Text>
-        </View>
+        </Pressable>
     )
 }
 

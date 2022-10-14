@@ -3,7 +3,14 @@ import {Image, Pressable, SafeAreaView, Text, View} from "react-native";
 import {styles} from "./styles";
 import Button from "../../../components/Button";
 
-const Splash = () => {
+const Splash = ({ navigation }) => {
+
+    const onSingUp = () => {
+        navigation.navigate('SingUp')
+    }
+    const onSignIn = () => {
+        navigation.navigate('SingIn')
+    }
     return (
         <SafeAreaView style={{flex: 1}}>
             <View style={styles.container}>
@@ -14,8 +21,8 @@ const Splash = () => {
                     <Text style={styles.title}>Here!</Text>
                 </View>
 
-                <Button title={'Sign Up'} />
-                <Pressable style={styles.signIn}>
+                <Button title={'Sign Up'}  onPress={onSingUp} />
+                <Pressable hitSlop={20} style={styles.signIn} onPress={onSignIn}>
                     <Text style={styles.signInTitle}>Sign In</Text>
                 </Pressable>
             </View>

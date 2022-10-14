@@ -12,7 +12,7 @@ const Splash = ({ navigation }) => {
         navigation.navigate('SingIn')
     }
     return (
-        <SafeAreaView style={{flex: 1}}>
+        <SafeAreaView style={{flex: 1, backgroundColor: 'white'}}>
             <View style={styles.container}>
                 <Image style={styles.image} source={require('../../../assets/Splash.png')} resizeMode={'contain'}/>
                 <View style={styles.titleContainer}>

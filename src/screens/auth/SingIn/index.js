@@ -9,9 +9,6 @@ import Google from "../../../components/Google";
 import Account from "../../../components/Account";
 
 const SingIn = () => {
-
-
-
     return (
         <View style={styles.container}>
             <AppHeader title='Sign Up'/>
@@ -22,7 +19,6 @@ const SingIn = () => {
                     label='Password'
                     placeholder='*******'
                 />
-
                 <Button title='Sign In'/>
                 <Separator/>
                 <Google/>

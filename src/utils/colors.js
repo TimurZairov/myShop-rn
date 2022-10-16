@@ -6,6 +6,6 @@ export const COLORS = {
     ORANGE_COLOR: '#FCA34D',
     INPUT_BORDER: '#8D9BB5',
     DARK_GREY: '#3F4A59',
-    LIGHT_GREY: '#DADADA'
-
+    LIGHT_GREY: '#DADADA',
+    GREY: '#F5F5F5'
 }

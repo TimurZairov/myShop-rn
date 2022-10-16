@@ -10,7 +10,7 @@ import {createBottomTabNavigator} from "@react-navigation/bottom-tabs";
 //https://www.npmjs.com/package/react-native-vector-icons#android
 //read top url to add icons
 import Ionicons from "react-native-vector-icons/Ionicons";
-import MaterialIcons from "react-native-vector-icons/MaterialIcons";
+
 
 import Splash from "./src/screens/auth/Splash";
 import SingUp from "./src/screens/auth/Singup";
@@ -37,7 +37,11 @@ const Tabs = () => {
                         return <Ionicons name="home" size={25} color={COLORS.GRAY_COLOR}/>
                     }
                 },
-                tabBarShowLabel: false
+                tabBarShowLabel: false,
+                tabBarStyle: {
+                    borderTopColor: COLORS.LIGHT_GREY,
+                    height: 60
+                }
             }}/>
             <Tab.Screen name='Favorite' component={Favorite} options={{
                 headerShown: false,
@@ -47,14 +51,22 @@ const Tabs = () => {
                         size={25}
                         color={focused ? COLORS.PRIMARY_COLOR : COLORS.GRAY_COLOR} />
                 },
-                tabBarShowLabel: false
+                tabBarShowLabel: false,
+                tabBarStyle: {
+                    borderTopColor: COLORS.LIGHT_GREY,
+                    height: 60
+                }
             }}/>
             <Tab.Screen name='Profile' component={Profile} options={{
                 headerShown: false,
                 tabBarIcon: ({focused}) => {
                     return <Ionicons name="person-sharp" size={25} color={focused ? COLORS.PRIMARY_COLOR : COLORS.GRAY_COLOR} />
                 },
-                tabBarShowLabel: false
+                tabBarShowLabel: false,
+                tabBarStyle: {
+                    borderTopColor: COLORS.LIGHT_GREY,
+                    height: 60
+                }
             }}/>
         </Tab.Navigator>
     )

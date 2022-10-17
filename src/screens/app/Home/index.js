@@ -8,7 +8,7 @@ const Home = () => {
     //принимает как пропсы
     const renderItem = ({item, index}) => {
         return (
-            <CategoryBox title={item?.title} image={item?.image}/>
+            <CategoryBox title={item?.title} image={item?.image} index={index} isFirst={item?.id === 0}/>
         )
     }
 

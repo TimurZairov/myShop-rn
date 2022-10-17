@@ -2,9 +2,14 @@ import {} from '../assets/eye.png'
 
 export const category = [
     {
+        id: 0,
+        title: 'Popular',
+        image: require('../assets/popular.png')
+    },
+    {
         id: 1,
         title: 'Chair',
-        image: require('../assets/chair.png')
+        image: require('../assets/armchair.png')
     },
     {
         id: 2,
@@ -23,12 +28,12 @@ export const category = [
     },
     {
         id: 5,
-        title: 'Sofa',
+        title: 'Wardrobe',
         image: require('../assets/chair.png')
     },
     {
         id: 6,
-        title: 'Laptop',
+        title: 'Table',
         image: require('../assets/table.png')
     },
 

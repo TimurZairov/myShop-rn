@@ -1,5 +1,6 @@
 import {Dimensions, StyleSheet} from "react-native";
 import {COLORS} from "../../utils/colors";
+//ширину экрана берем с помощью Dimension и отнимаем паддинги и марджины
 const {width} = Dimensions.get('window')
 
 

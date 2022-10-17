@@ -7,5 +7,7 @@ export const COLORS = {
     INPUT_BORDER: '#8D9BB5',
     DARK_GREY: '#3F4A59',
     LIGHT_GREY: '#DADADA',
-    GREY: '#F5F5F5'
+    GREY: '#F5F5F5',
+    FONT_GREY: '#606060',
+    FONT_BLACK: '#303030'
 }

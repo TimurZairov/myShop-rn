@@ -5,7 +5,7 @@ import Input from "../Input";
 import {COLORS} from "../../utils/colors";
 import Ionicons from "react-native-vector-icons/Ionicons";
 
-const AppHeader = ({title, onPress, onSearch, onLogOut, goBack}) => {
+const Header = ({title, onPress, onSearch, onLogOut, goBack, keyWord, setKeyWord }) => {
     const [showSearch, setShowSearch] = useState(false)
 
     const onSearchClick = () => {
@@ -45,11 +45,11 @@ const AppHeader = ({title, onPress, onSearch, onLogOut, goBack}) => {
                 )}
             </View>
             <View style={{backgroundColor: COLORS.MAIN_COLOR, paddingHorizontal: 22}}>
-                {showSearch && <Input placeholder="Type your keyword..." label="Search"/>}
+                {showSearch && <Input placeholder="Type your keyword..." label="Search" keyWord={keyWord} setKeyWord={setKeyWord}/>}
             </View>
         </View>
 
     )
 }
 
-export default AppHeader
+export default Header

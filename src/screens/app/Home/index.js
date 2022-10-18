@@ -13,6 +13,9 @@ const Home = () => {
     //state для категорий фильтров, по умолчанию 0
     const [selectedCategory, setSelectedCategory] = useState(0)
     const [allProducts, setAllProducts] = useState(products)
+    const [keyWord, setKeyWord] = useState()
+    console.log(keyWord)
+
     //получапм айди если айди === равен категории меняем бэк
     const selectCategory = (id) => {
         setSelectedCategory(id)
@@ -33,24 +36,25 @@ const Home = () => {
     const renderProductHomeItem = ({item}) => {
         return (
             <ProductBox  {...item}/>
-
         )
     }
 
     useEffect(() => {
         //Фильтр категорий, если selectedCategory === 0 то выводит все категории
-        if(selectedCategory !== 0){
+        if(selectedCategory !== 0 && !keyWord){
             const updatedCategory = products.filter(item => item.category === selectedCategory)
             setAllProducts(updatedCategory)
-        } else {
+        } else if(selectedCategory === 0 && keyWord) {
+            const updatedCategory = products.filter(item => item.title.toLowerCase().includes(keyWord.toString().toLowerCase()))
+            setAllProducts(updatedCategory)
+        }else if(selectedCategory === 0 && !keyWord){
             setAllProducts(products)
         }
-
-    }, [selectedCategory])
+    }, [selectedCategory, keyWord])
 
     return (
         <View style={{backgroundColor: 'white', flex: 1}}>
-            <Header title="Find All You Need" onSearch/>
+            <Header title="Find All You Need" onSearch keyWord={keyWord} setKeyWord={setKeyWord}/>
             <View style={styles.list}>
                 <FlatList
                     data={category}

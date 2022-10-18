@@ -4,7 +4,7 @@ import {styles} from './style'
 
 
 
-const Input = ({label, placeholder, isPassword}) => {
+const Input = ({label, placeholder, isPassword, keyWord, setKeyWord}) => {
     const [isPasswordVisible, setIsPasswordVisible] = useState(false)
     const visiblePasswordHandler = () => {
         setIsPasswordVisible(!isPasswordVisible)
@@ -16,7 +16,13 @@ const Input = ({label, placeholder, isPassword}) => {
                 {label}
             </Text>
             <View style={styles.inputBorder}>
-                <TextInput secureTextEntry={isPasswordVisible && isPassword} style={styles.input} placeholder={placeholder} />
+                <TextInput
+                    value={keyWord}
+                    secureTextEntry={isPasswordVisible && isPassword}
+                    style={styles.input}
+                    placeholder={placeholder}
+                    onChangeText={setKeyWord}
+                />
                 {isPassword ? (
                     <Pressable onPress={visiblePasswordHandler}>
                         <Image style={styles.image} source={ isPasswordVisible ? require('../../assets/eye.png') : require('../../assets/eye_closed.png') } />

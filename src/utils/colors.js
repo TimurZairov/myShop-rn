@@ -9,5 +9,6 @@ export const COLORS = {
     LIGHT_GREY: '#DADADA',
     GREY: '#F5F5F5',
     FONT_GREY: '#606060',
-    FONT_BLACK: '#303030'
+    FONT_BLACK: '#303030',
+    BORDER_COLOR: '#F0F0F0'
 }

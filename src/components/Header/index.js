@@ -5,7 +5,7 @@ import Input from "../Input";
 import {COLORS} from "../../utils/colors";
 import Ionicons from "react-native-vector-icons/Ionicons";
 
-const Header = ({title, onPress, onSearch, onLogOut, goBack, keyWord, setKeyWord }) => {
+const Header = ({title, onPress, onFavorite, onSearch, onLogOut, goBack, keyWord, setKeyWord }) => {
     const [showSearch, setShowSearch] = useState(false)
 
     const onSearchClick = () => {
@@ -31,6 +31,13 @@ const Header = ({title, onPress, onSearch, onLogOut, goBack, keyWord, setKeyWord
                         <Text style={styles.topNavigateTitle}>{title}</Text>
                         <View style={styles.emptyBox}></View>
                     </>
+                ) : onFavorite ? (
+                    <>
+                        <View style={styles.emptyBox}></View>
+                        <Text style={styles.topNavigateTitle}>{title}</Text>
+                        <View style={styles.emptyBox}></View>
+                    </>
+
                 ) : null}
 
                 {/*    LogOut*/}

@@ -14,7 +14,6 @@ const Home = () => {
     const [selectedCategory, setSelectedCategory] = useState(0)
     const [allProducts, setAllProducts] = useState(products)
     const [keyWord, setKeyWord] = useState()
-    console.log(keyWord)
 
     //получапм айди если айди === равен категории меняем бэк
     const selectCategory = (id) => {
@@ -40,7 +39,7 @@ const Home = () => {
     }
 
     useEffect(() => {
-        //Фильтр категорий, если selectedCategory === 0 то выводит все категории
+        //Фильтр категорий, если selectedCategory === 0 то выводит все категории и по ключевым словам
         if(selectedCategory !== 0 && !keyWord){
             const updatedCategory = products.filter(item => item.category === selectedCategory)
             setAllProducts(updatedCategory)

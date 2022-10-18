@@ -4,28 +4,32 @@ export const products = [
         title: 'Loft Style Chair',
         image: 'https://svarog-irkutsk.ru/wp-content/uploads/2020/09/vas_7303.866x1300-1.jpg.pagespeed.ce_.nszptsh-it-1.jpg',
         category: 1,
-        price: '$ 20.00'
+        price: '$ 20.00',
+        description: 'Minimal Stand is made of by natural wood. The design that is very simple and minimal. This is truly one of the best furnitures in any family for now. With 3 different colors, you can easily select the best match for your home. '
     },
     {
         id: 2,
         title: 'Wood Mini Table',
         image: 'https://i.pinimg.com/originals/dc/4c/4c/dc4c4cd67d8672b02f0e320f900906e5.jpg',
         category: 2,
-        price: '$ 25.00'
+        price: '$ 25.00',
+        description: 'Minimal Stand is made of by natural wood. The design that is very simple and minimal. This is truly one of the best furnitures in any family for now. With 3 different colors, you can easily select the best match for your home. '
     },
     {
         id: 3,
         title: 'Luxe Yellow Armchair',
         image: 'https://i.pinimg.com/736x/ee/50/c2/ee50c24486517436bd7a84761bb69951.jpg',
         category: 3,
-        price: '$ 45.00'
+        price: '$ 45.00',
+        description: 'Minimal Stand is made of by natural wood. The design that is very simple and minimal. This is truly one of the best furnitures in any family for now. With 3 different colors, you can easily select the best match for your home. '
     },
     {
         id: 4,
         title: 'Cozy Armchair',
         image: 'https://i.pinimg.com/736x/08/db/3f/08db3fd3e9ce7efd7aa993504c4e8322.jpg',
         category: 3,
-        price: '$ 80.00'
+        price: '$ 80.00',
+        description: 'Minimal Stand is made of by natural wood. The design that is very simple and minimal. This is truly one of the best furnitures in any family for now. With 3 different colors, you can easily select the best match for your home. '
     },
     {
         id: 5,

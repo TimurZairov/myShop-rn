@@ -19,6 +19,7 @@ import {COLORS} from "./src/utils/colors";
 import Home from "./src/screens/app/Home";
 import Favorite from "./src/screens/app/Favorite";
 import Profile from "./src/screens/app/Profile";
+import ProductDetail from "./src/screens/app/ProductDetail";
 
 
 const Stack = createNativeStackNavigator()
@@ -49,7 +50,7 @@ const Tabs = () => {
                     return <Ionicons
                         name="md-bookmark"
                         size={25}
-                        color={focused ? COLORS.PRIMARY_COLOR : COLORS.GRAY_COLOR} />
+                        color={focused ? COLORS.PRIMARY_COLOR : COLORS.GRAY_COLOR}/>
                 },
                 tabBarShowLabel: false,
                 tabBarStyle: {
@@ -60,7 +61,8 @@ const Tabs = () => {
             <Tab.Screen name='Profile' component={Profile} options={{
                 headerShown: false,
                 tabBarIcon: ({focused}) => {
-                    return <Ionicons name="person-sharp" size={25} color={focused ? COLORS.PRIMARY_COLOR : COLORS.GRAY_COLOR} />
+                    return <Ionicons name="person-sharp" size={25}
+                                     color={focused ? COLORS.PRIMARY_COLOR : COLORS.GRAY_COLOR}/>
                 },
                 tabBarShowLabel: false,
                 tabBarStyle: {
@@ -83,13 +85,21 @@ const App: () => Node = () => {
 
     return (
         <NavigationContainer>
-            {isSigned ? <Tabs/> : (
-                <Stack.Navigator>
-                    <Stack.Screen name='Splash' component={Splash} options={{headerShown: false}}/>
-                    <Stack.Screen name='SingUp' component={SingUp} options={{headerShown: false}}/>
-                    <Stack.Screen name='SingIn' component={SingIn} options={{headerShown: false}}/>
-                </Stack.Navigator>
-            )}
+            <Stack.Navigator>
+                {isSigned ?
+                    <>
+                        <Stack.Screen name='Tabs' component={Tabs} options={{headerShown: false}}/>
+                        <Stack.Screen name='Product' component={ProductDetail} options={{headerShown: false}}/>
+                    </>
+                    : (
+                    <>
+                        <Stack.Screen name='Splash' component={Splash} options={{headerShown: false}}/>
+                        <Stack.Screen name='SingUp' component={SingUp} options={{headerShown: false}}/>
+                        <Stack.Screen name='SingIn' component={SingIn} options={{headerShown: false}}/>
+                    </>
+                )}
+            </Stack.Navigator>
+
         </NavigationContainer>
     );
 };

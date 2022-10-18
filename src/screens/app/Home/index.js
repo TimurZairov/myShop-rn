@@ -9,7 +9,7 @@ import CategoryBox from "../../../components/CategoryBox"
 import Header from "../../../components/Header";
 import ProductBox from "../../../components/ProductBox";
 
-const Home = () => {
+const Home = ({navigation}) => {
     //state для категорий фильтров, по умолчанию 0
     const [selectedCategory, setSelectedCategory] = useState(0)
     const [allProducts, setAllProducts] = useState(products)
@@ -31,10 +31,17 @@ const Home = () => {
             />
         )
     }
+
+
     //Item принимает как пропсы
     const renderProductHomeItem = ({item}) => {
+        //navigate to detailScreen и передаем туда объект с парметрами получаем нужный айтем при роуте если внутри renderProductHomeItem
+        const productDetails = () => {
+            navigation.navigate('Product', {item})
+        }
         return (
-            <ProductBox  {...item}/>
+            // а тут передаем финкцию навигации котрая выше
+            <ProductBox productDetails={productDetails}  {...item}  />
         )
     }
 

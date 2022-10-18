@@ -20,5 +20,4 @@ const FavoriteItems = ({title, image, price}) => {
 
     )
 }
-
 export default FavoriteItems

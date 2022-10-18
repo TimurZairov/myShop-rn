@@ -8,7 +8,8 @@ export const styles = StyleSheet.create({
         padding: 8,
         justifyContent: 'center',
         alignItems: 'center',
-        borderRadius: 8
+        borderRadius: 8,
+        flex: 1
     },
     buttonTitle: {
         color: COLORS.MAIN_COLOR,

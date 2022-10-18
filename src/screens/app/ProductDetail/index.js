@@ -14,7 +14,6 @@ const ProductDetail = ({route}) => {
                     <Text style={styles.title}>{title}</Text>
                     <Text style={styles.price}>{price}</Text>
                     <Text style={styles.description}>{description}</Text>
-
                 </View>
             </ScrollView>
             <View style={styles.btn}>

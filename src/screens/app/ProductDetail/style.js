@@ -11,6 +11,7 @@ export const styles = StyleSheet.create({
     content: {
         width: '100%',
         // height: height - height * 0.55,
+        minHeight: height - height * 0.55,
         backgroundColor: COLORS.MAIN_COLOR,
         marginTop: -40,
         borderTopRightRadius: 16,

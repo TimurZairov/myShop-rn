@@ -3,10 +3,16 @@ import {FlatList, Text, View} from "react-native";
 import Header from "../../../components/Header";
 import {products} from "../../../data/products";
 import FavoriteItems from "../../../components/FavoriteItems";
-const Favorite = () => {
 
-    const renderItem = ({item, index}) => {
-        return <FavoriteItems {...item} />
+
+const Favorite = ({navigation}) => {
+    const renderItem = ({item }) => {
+
+        const productDetailsHandler = () => {
+            navigation.navigate('Product', {item})
+        }
+
+        return <FavoriteItems productDetailsHandler={productDetailsHandler} {...item} />
     }
 
     return (

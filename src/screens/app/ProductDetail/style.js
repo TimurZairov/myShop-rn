@@ -4,6 +4,21 @@ import {COLORS} from "../../../utils/colors";
 const {height} = Dimensions.get('window')
 
 export const styles = StyleSheet.create({
+    mainContainer: {
+        position: 'relative',
+    },
+    backBtn: {
+        position: "absolute",
+        top: 20,
+        left: 20,
+        zIndex: 10,
+        width: 40,
+        height: 40,
+        backgroundColor: COLORS.BORDER_COLOR,
+        borderRadius: 8,
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
     image: {
         width: '100%',
         height: height * 0.55

@@ -8,7 +8,7 @@ const CategoryBox = ({title, image, selectedCategory, selectCategory, index }) =
     return (
         <TouchableOpacity activeOpacity={0.5} style={styles.container} onPress={() => selectCategory(index)}>
             {/*получаем id из Home и говорим равный === 0*/}
-            <View style={[styles.wrapper,  selectedCategory? {backgroundColor: '#afafaf'} : {}]}>
+            <View style={[styles.wrapper,  selectedCategory? {backgroundColor: '#dadada'} : {}]}>
                 <Image style={styles.image} source={image} />
             </View>
             <Text style={{marginTop: 5, fontSize: 14, fontWeight: '400'}}>{title}</Text>

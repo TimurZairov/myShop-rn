@@ -5,6 +5,7 @@ import {FlatList, View} from "react-native";
 import {styles} from "./style";
 import {products} from "../../../data/products";
 import {category} from '../../../data/category';
+
 import CategoryBox from "../../../components/CategoryBox"
 import Header from "../../../components/Header";
 import ProductBox from "../../../components/ProductBox";
@@ -41,7 +42,7 @@ const Home = ({navigation}) => {
         }
         return (
             // а тут передаем финкцию навигации котрая выше
-            <ProductBox productDetails={productDetails}  {...item}  />
+            <ProductBox productDetails={productDetails} {...item} />
         )
     }
 

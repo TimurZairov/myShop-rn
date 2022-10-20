@@ -1,7 +1,7 @@
 import {Dimensions, StyleSheet} from "react-native";
 import {COLORS} from "../../../utils/colors";
 
-const {height} = Dimensions.get('window')
+const {height, width} = Dimensions.get('window')
 
 export const styles = StyleSheet.create({
     mainContainer: {
@@ -20,7 +20,7 @@ export const styles = StyleSheet.create({
         justifyContent: 'center',
     },
     image: {
-        width: '100%',
+        width: width,
         height: height * 0.55
     },
     content: {

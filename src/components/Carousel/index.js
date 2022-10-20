@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import {Dimensions, FlatList, Image, View} from "react-native";
 import {styles} from './style'
 
-const {height, width} = Dimensions.get('window')
+const {width} = Dimensions.get('window')
 
 
 

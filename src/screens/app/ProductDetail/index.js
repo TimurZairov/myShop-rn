@@ -1,5 +1,5 @@
 import React from 'react'
-import {Image, Text, View, ScrollView, TouchableOpacity} from "react-native";
+import {Image, Text, View, ScrollView, TouchableOpacity, Linking} from "react-native";
 import {styles} from './style'
 import Button from "../../../components/Button";
 import Ionicons from "react-native-vector-icons/Ionicons";
@@ -11,6 +11,13 @@ const ProductDetail = ({route, navigation}) => {
     const {title, image, price, description, images} = route.params.item
     const goBackHandler = () => {
         navigation.goBack()
+    }
+
+    const onContact = () => {
+        //make call
+        Linking.openURL('tel: +998999999999')
+        //Send email
+        // Linking.openURL('mailto: asd@gmail.com')
     }
 
     return (
@@ -31,7 +38,7 @@ const ProductDetail = ({route, navigation}) => {
                 <View style={styles.bookIcon}>
                     <Ionicons name="md-bookmark" size={35}/>
                 </View>
-                <Button title="Contact Seller"/>
+                <Button onPress={onContact} title="Contact Seller"/>
             </View>
         </>
 

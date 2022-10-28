@@ -20,6 +20,7 @@ import Home from "./src/screens/app/Home";
 import Favorite from "./src/screens/app/Favorite";
 import Profile from "./src/screens/app/Profile";
 import ProductDetail from "./src/screens/app/ProductDetail";
+import Settings from './src/screens/app/Settings'
 
 
 const Stack = createNativeStackNavigator()
@@ -30,7 +31,7 @@ const ProfileTab = () => {
         <Stack.Navigator>
             <>
                 <Stack.Screen name='Profile' component={Profile} options={{headerShown: false}}/>
-                <Stack.Screen name='Product' component={ProductDetail} options={{headerShown: false}}/>
+                <Stack.Screen name='Settings' component={Settings} options={{headerShown: false}}/>
             </>
         </Stack.Navigator>
     )

@@ -25,7 +25,7 @@ const Header = ({title, onPress, onFavorite, onSearch, onLogOut, goBack, keyWord
                     </>
                 ) : goBack ? (
                     <>
-                        <Pressable hitSlop={20}>
+                        <Pressable hitSlop={20} onPress={onPress}>
                             <Ionicons name="arrow-back" size={24} color={COLORS.PRIMARY_COLOR}/>
                         </Pressable>
                         <Text style={styles.topNavigateTitle}>{title}</Text>

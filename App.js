@@ -25,6 +25,16 @@ import ProductDetail from "./src/screens/app/ProductDetail";
 const Stack = createNativeStackNavigator()
 const Tab = createBottomTabNavigator()
 
+const ProfileTab = () => {
+    return (
+        <Stack.Navigator>
+            <>
+                <Stack.Screen name='Profile' component={Profile} options={{headerShown: false}}/>
+                <Stack.Screen name='Product' component={ProductDetail} options={{headerShown: false}}/>
+            </>
+        </Stack.Navigator>
+    )
+}
 
 const Tabs = () => {
     return (
@@ -58,7 +68,7 @@ const Tabs = () => {
                     height: 60
                 }
             }}/>
-            <Tab.Screen name='Profile' component={Profile} options={{
+            <Tab.Screen name='ProfileTab' component={ProfileTab} options={{
                 headerShown: false,
                 tabBarIcon: ({focused}) => {
                     return <Ionicons name="person-sharp" size={25}
@@ -92,12 +102,12 @@ const App: () => Node = () => {
                         <Stack.Screen name='Product' component={ProductDetail} options={{headerShown: false}}/>
                     </>
                     : (
-                    <>
-                        <Stack.Screen name='Splash' component={Splash} options={{headerShown: false}}/>
-                        <Stack.Screen name='SingUp' component={SingUp} options={{headerShown: false}}/>
-                        <Stack.Screen name='SingIn' component={SingIn} options={{headerShown: false}}/>
-                    </>
-                )}
+                        <>
+                            <Stack.Screen name='Splash' component={Splash} options={{headerShown: false}}/>
+                            <Stack.Screen name='SingUp' component={SingUp} options={{headerShown: false}}/>
+                            <Stack.Screen name='SingIn' component={SingIn} options={{headerShown: false}}/>
+                        </>
+                    )}
             </Stack.Navigator>
 
         </NavigationContainer>

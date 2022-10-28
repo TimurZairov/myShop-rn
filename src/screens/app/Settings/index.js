@@ -6,9 +6,9 @@ import Ionicons from "react-native-vector-icons/Ionicons";
 import {COLORS} from "../../../utils/colors";
 import ProfileListingItem from "../../../components/ProfileListingItem";
 import Button from "../../../components/Button";
-import {keys} from "@babel/runtime/helpers/regeneratorRuntime";
 
 const Settings = ({navigation}) => {
+
     const [isEditing, setIsEditing] = useState(false)
     const [value, setValue] = useState({name: 'Timur Zairov', email: 'zairovne@gmail.com'})
 
@@ -52,7 +52,7 @@ const Settings = ({navigation}) => {
                 <View style={styles.inputContent}>
                     <View style={{height: 45}}>
                         <Text style={styles.inputText}>Email</Text>
-                        <TextInput style={styles.input} value={value.email} editable={isEditing}/>
+                        <TextInput style={styles.input} value={value.email} editable={isEditing} onChangeText={v => onChange('email', v)}/>
                     </View>
                 </View>
 
